@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Str;
 
-class EventController extends Controller
+class AdminEventController extends Controller
 {
     
     public function index()

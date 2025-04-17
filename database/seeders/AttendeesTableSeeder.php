@@ -6,11 +6,14 @@ use App\Models\Attendee;
 use App\Models\Event;
 use App\Models\User;
 use Illuminate\Database\Seeder;
+use Faker\Factory as Faker;
 
 class AttendeesTableSeeder extends Seeder
 {
     public function run()
     {
+        $fake =Faker::create();
+
         $events = Event::where('is_approved', true)->get();
         $attendees = User::where('role', 'attendee')->get();
 
@@ -33,7 +36,7 @@ class AttendeesTableSeeder extends Seeder
                     'event_id' => $event->id,
                     'status' => $this->getRandomStatus($event),
                     'ticket_count' => rand(1, 3),
-                    'notes' => rand(0, 1) ? 'Special requirements: ' . fake()->sentence() : null,
+                    'notes' => rand(0, 1) ? 'Special requirements: ': $fake->sentence(rand(5, 15)),
                 ]);
             }
         }

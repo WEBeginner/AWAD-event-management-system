@@ -1,12 +1,14 @@
 <?php
 
-use App\Http\Controllers\Admin\EventController as AdminEventController;
+use App\Http\Controllers\EventController;
+use App\Http\Controllers\AdminEventController ; // Ensure this class exists in the specified namespace
+
+// Ensure the Admin\EventController class exists in the specified namespace.
 use App\Http\Controllers\AttendeeController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\EventController;
 use Illuminate\Support\Facades\Route;
 
 /*

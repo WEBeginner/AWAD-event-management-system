@@ -22,11 +22,6 @@ class EventFactory extends Factory
             'capacity' => $this->faker->numberBetween(10, 100),
             'price' => $this->faker->randomElement([0, 0, 0, 0, 10, 20, 50]),
             'is_approved' => $this->faker->boolean(80),
-            'requires_approval' => $this->faker->boolean(30),
-            'registration_instructions' => $this->faker->boolean(50) ? $this->faker->paragraph() : null,
-            'registration_deadline' => $this->faker->boolean(70) 
-                ? $this->faker->dateTimeBetween('now', $startDate) 
-                : null,
         ];
     }
     
